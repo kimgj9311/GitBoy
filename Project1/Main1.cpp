@@ -189,8 +189,6 @@ void playerAttack() {
 		
 }
 
-
-
 int main()
 {
 	player player1;
@@ -207,8 +205,6 @@ int main()
 	}
 	char select = 0;
 
-
-
 	cout << "\n+------------------+\n";
 	cout << "|     Job List     |\n";
 	cout << "+------------------+\n";
@@ -223,15 +219,11 @@ int main()
 		cout << "Defense  : " << jobs[i].def << endl;
 	}
 
-
-	
 	int playerJob;
 	bool validChoice=false;
 	while (!validChoice) {
 		cout << "Choose your job: ";
 		cin >> select;
-		
-
 		switch (toupper(select))
 		{
 		case 'A':
@@ -273,7 +265,6 @@ int main()
 		}
 	}
 
-	
 	playerStatus(player1, playerWep);
 	validChoice=false;
 		while (!validChoice) {
@@ -318,21 +309,17 @@ int main()
 	weapon weapons[12][3];
 	callWeps(weapons);
 	
-
-
 	for (int i = 0; i < 3; i++) {
 		cout <<"          "<< char('A' + i) <<endl<< "======================\n";
 		cout << "--  "<< weapons[playerJob][i].name <<"  --"<< endl;
 		cout << weapons[playerJob][i].desc << endl;
 		cout << "Attack     : " << weapons[playerJob][i].attk << endl;
 		cout << "Penetration: " << weapons[playerJob][i].AP << endl << "======================\n";
-
 	}
 	validChoice = false;
 	while (!validChoice) {
 		cout << "Choose your weapon: ";
 		cin >> select;
-
 
 		switch (toupper(select))
 		{
