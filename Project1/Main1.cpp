@@ -3,7 +3,7 @@
 
 
 using namespace std;
-
+fck
 
 class monster
 {
