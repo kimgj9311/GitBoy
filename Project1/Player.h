@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 #include <string>
 #include <vector>
 #include "Job.h"
@@ -9,11 +10,12 @@ using namespace std;
 
 class Player
 {
-
-public:
-	Inventory playerInv;
+private:
 	int hp;
 	int maxHP;
+public:
+	Inventory playerInv;
+	
 	int stam;
 	int maxStam;
 	int def;
@@ -40,8 +42,8 @@ public:
 		job = value->name;
 		playerJob = value->jobID;
 	}
-	////void playerAttack(Weapon playerWep) {
-	//	//damage = playerWep.attk - ();
-	//}
+	void takedmg(Player player1,int dmg);
+	void playerAttack(Player& player1,);
+
+
 };
-void playerAttack(Player& player1, vector<Monsters>& activeMonsters);

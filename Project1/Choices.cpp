@@ -132,11 +132,12 @@ void chooseWeapon(Player& player1, Weapon& playerWep, Weapon weapons[][3], Weapo
 
 //Game Start
 void choosePath(Player& player1, Weapon& playerWep, Weapon weapons[][3], Weapon& playerWep2, Inventory& playerInv) {
-	bool validChoice = false;
-	int select;
+	
 
 	cout << "Your ship wreckage has little no supplies, most destroyed in the crash.\nYou can search for supplies in the wreckage or go find some materials in the woods, but you are also low on stamina and slightly injured. You can rest to recover.\n";
 	cout << "1. Scavenge Wreckage\n2. Look for materials in woods\n3. Rest\n";
+	bool validChoice = false;
+	int select;
 	select = 0;
 	while (!validChoice) {
 		cout << "Select your path: ";
@@ -156,6 +157,43 @@ void choosePath(Player& player1, Weapon& playerWep, Weapon weapons[][3], Weapon&
 			player1.location = "Twisted Vine Woods";
 			playerInv.addItem(1,2);
 			playerInv.addItem(1,2);
+			validChoice = true;
+			break;
+		case 3:
+			player1.stam += 40;
+			validChoice = true;
+			break;
+
+		default:
+			cout << "\nInvalid Input. Enter 1, 2, or 3.\n";
+			break;
+		}
+	}
+	system("cls");
+}
+
+void choosePath(Player& player1, Weapon& playerWep, Weapon weapons[][3], Weapon& playerWep2, Inventory& playerInv) {
+	bool validChoice = false;
+	int select;
+	select = 0;
+	while (!validChoice) {
+		cout << "Select your path: ";
+		if (!(cin >> select)) {
+			cout << "\nPlease enter a number.\n";
+			cin.clear();
+			cin.ignore(1000, '\n');
+			continue;
+		}
+		switch ((select))
+		{
+		case 1:
+
+			validChoice = true;
+			break;
+		case 2:
+			player1.location = "Twisted Vine Woods";
+			playerInv.addItem(1, 2);
+			playerInv.addItem(1, 2);
 			validChoice = true;
 			break;
 		case 3:

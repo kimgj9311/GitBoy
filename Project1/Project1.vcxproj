@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Choices.cpp" />
+    <ClCompile Include="Combat.cpp" />
     <ClCompile Include="Fabricator.cpp" />
     <ClCompile Include="HUD.cpp" />
     <ClCompile Include="Inventory.cpp" />
@@ -33,6 +34,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Choices.h" />
+    <ClInclude Include="Combat.h" />
     <ClInclude Include="HUD.h" />
     <ClInclude Include="Inventory.h" />
     <ClInclude Include="Item.h" />
