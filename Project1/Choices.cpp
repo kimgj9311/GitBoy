@@ -150,50 +150,13 @@ void choosePath(Player& player1, Weapon& playerWep, Weapon weapons[][3], Weapon&
 		switch ((select))
 		{
 		case 1:
-
+			playerInv.addItem(1, 3);
 			validChoice = true;
 			break;
 		case 2:
 			player1.location = "Twisted Vine Woods";
 			playerInv.addItem(1,2);
 			playerInv.addItem(1,2);
-			validChoice = true;
-			break;
-		case 3:
-			player1.stam += 40;
-			validChoice = true;
-			break;
-
-		default:
-			cout << "\nInvalid Input. Enter 1, 2, or 3.\n";
-			break;
-		}
-	}
-	system("cls");
-}
-
-void choosePath(Player& player1, Weapon& playerWep, Weapon weapons[][3], Weapon& playerWep2, Inventory& playerInv) {
-	bool validChoice = false;
-	int select;
-	select = 0;
-	while (!validChoice) {
-		cout << "Select your path: ";
-		if (!(cin >> select)) {
-			cout << "\nPlease enter a number.\n";
-			cin.clear();
-			cin.ignore(1000, '\n');
-			continue;
-		}
-		switch ((select))
-		{
-		case 1:
-
-			validChoice = true;
-			break;
-		case 2:
-			player1.location = "Twisted Vine Woods";
-			playerInv.addItem(1, 2);
-			playerInv.addItem(1, 2);
 			validChoice = true;
 			break;
 		case 3:

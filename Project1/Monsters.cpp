@@ -56,14 +56,3 @@ void callMonsters(Monsters monsters[]) {
 	monsters[7].attk = 70;
 	monsters[7].def = 60;
 }
-void mobAttk(Player& player1, Monsters monsters[], int monsID)
-{
-	int dmg;
-	dmg = monsters[monsID].attk - player1.def;
-	player1.hp -= dmg;
-
-
-	cout << "\nThe monsters attack!\n";
-	cout << "You received " << dmg << " damage.\n";
-	cout << "Your HP: " << player1.hp << " / " << player1.maxHP << "\n";
-}

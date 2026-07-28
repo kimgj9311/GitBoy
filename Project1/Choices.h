@@ -1,5 +1,4 @@
 #pragma once
-
 #include "Player.h"
 #include "Job.h"
 #include "HUD.h"

@@ -17,4 +17,3 @@ public:
 };
 void callMonsters(Monsters monsters[]);
 
-void mobAttk(Player& player1, Monsters monsters[], int monsID);

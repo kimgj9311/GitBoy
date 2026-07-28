@@ -10,12 +10,11 @@ using namespace std;
 
 class Player
 {
-private:
-	int hp;
-	int maxHP;
+
 public:
 	Inventory playerInv;
-	
+	int hp;
+	int maxHP;
 	int stam;
 	int maxStam;
 	int def;
@@ -42,8 +41,6 @@ public:
 		job = value->name;
 		playerJob = value->jobID;
 	}
-	void takedmg(Player player1,int dmg);
-	void playerAttack(Player& player1,);
 
 
 };
